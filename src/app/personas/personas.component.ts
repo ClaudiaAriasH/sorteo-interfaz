@@ -28,8 +28,14 @@ export class PersonasComponent implements OnInit {
 
   borrarPersona(persona) {
     this.personasService.borrar(persona.id)
-      .subscribe(data => {
-        this.toastr.success('Persona elimina con éxito');
+      .subscribe(response => {
+        const mensaje = response['_body'];
+        if(mensaje.includes('correctamente')){
+          this.toastr.success(mensaje);
+        } else {
+          this.toastr.warning(mensaje);
+        }
+        
         this.cargarPersonas();
       });
   }

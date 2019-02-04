@@ -3,10 +3,6 @@
         <i class="material-icons user-icon">group</i>
     </div>
 
-    <div class="col s4 offset-s4 center-align" *ngIf="mensaje">
-        {{ mensaje }}
-    </div>
-
     <div class="col s4 offset-s4 center-align">
         <button (click)="bottomSheetModal.openModal()" class="btn waves-effect waves-light" type="button">Presiona para el sorteo
         </button>
@@ -19,7 +15,7 @@
 
     <p class="right">
         Mostrando
-        <strong>{{ ganadoresSorteo.length }}</strong> ganadores
+        <strong>{{ ganadoresSorteo.length }}</strong> ganador(es)
     </p>
 
     <div class="row">
