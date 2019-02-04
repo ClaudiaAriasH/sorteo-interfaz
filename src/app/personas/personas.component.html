@@ -22,7 +22,7 @@
                 <td>{{ persona.apellidos }}</td>
                 <td>{{ persona.fechaNacimiento | date: 'dd/MM/yyyy' }}</td>
                 <td>
-                    <a materialize="tooltip" data-tooltip="Editar" class="pointer" [routerLink]="['/personas', persona.id]">
+                    <a class="pointer" [routerLink]="['/personas', persona.id]">
                         <i class="material-icons">check</i>
                     </a>
                 </td>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <div class="fixed-action-btn">
         <a class="btn-floating btn-large waves-effect waves-light green" routerLink="/personas/crear">
             <i class="material-icons">add</i>
         </a>

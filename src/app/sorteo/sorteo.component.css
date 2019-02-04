@@ -10,3 +10,7 @@
     color: #ee6e73;
     font-size: 7rem;
 }
+
+.modal-button {
+    margin-left: 20px !important;
+}

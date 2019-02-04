@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
 import { routing } from './app.routing';
-import { MzCheckboxModule, MzInputModule, MzSelectModule } from 'ngx-materialize';
+import { MzCheckboxModule, MzInputModule, MzSelectModule, MzModalModule } from 'ngx-materialize';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -16,6 +16,7 @@ import { PersonasComponent } from './personas/personas.component';
 import { SorteoComponent } from './sorteo/sorteo.component';
 import { CrearComponent } from './personas/crear/crear.component';
 import { PersonasService } from './personas/shared/personas.service';
+import { SorteoService } from './sorteo/shared/sorteo.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +37,10 @@ import { PersonasService } from './personas/shared/personas.service';
     ToastrModule.forRoot(),
     MzSelectModule, 
     MzInputModule,
-    MzCheckboxModule
+    MzCheckboxModule,
+    MzModalModule
   ],
-  providers: [PersonasService],
+  providers: [PersonasService, SorteoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

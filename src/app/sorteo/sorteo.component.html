@@ -2,8 +2,54 @@
     <div class="col s4 offset-s4 center-align">
         <i class="material-icons user-icon">group</i>
     </div>
+
+    <div class="col s4 offset-s4 center-align" *ngIf="mensaje">
+        {{ mensaje }}
+    </div>
+
     <div class="col s4 offset-s4 center-align">
-        <button class="btn waves-effect waves-light" type="button">Presiona para el sorteo
-      </button>
+        <button (click)="bottomSheetModal.openModal()" class="btn waves-effect waves-light" type="button">Presiona para el sorteo
+        </button>
     </div>
 </div>
+
+<ng-container *ngIf="ganadores?.length">
+
+    <p class="right">
+        Mostrando
+        <strong>{{ ganadores.length }}</strong> ganadores
+    </p>
+
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th data-field="name">Nombre del ganador</th>
+                    <th data-field="name">Premio</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let ganador of ganadores">
+                    <td>{{ ganador.nombre}}</td>
+                    <td>{{ ganador.premio }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</ng-container>
+
+<mz-modal #bottomSheetModal>
+    <mz-modal-header>
+        <h4>¿Está seguro de realizar el sorteo?</h4>
+    </mz-modal-header>
+    <mz-modal-content>
+        Al presionar el botón
+        <strong>Estoy seguro</strong> se realizará la asignación de premios a las personas que se encuentren registradas de forma aleatoria.
+    </mz-modal-content>
+    <mz-modal-footer>
+        <button mz-button mz-modal-close class="btn waves-effect waves-light" type="button">Cancelar</button>
+        <button mz-button mz-modal-close (click)="comenzarSorteo()" class="modal-button btn waves-effect waves-light" type="button">Estoy seguro</button>
+    </mz-modal-footer>
+</mz-modal>
