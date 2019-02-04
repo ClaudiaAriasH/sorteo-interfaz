@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="input-field col s6">
+        <i class="material-icons prefix">person_pin</i>
+        <input id="nroDocumento" type="text" class="validate" [(ngModel)]="persona.nroDocumento">
+        <label for="nroDocumento" [class.active]="persona?.nroDocumento">
+            Número de documento
+        </label>
+    </div>
+
+    <div class="input-field col s6 select-tipo">
+        <mz-select-container>
+            <select mz-select [label]="'Tipo de documento'" [placeholder]="'Selecciona una opción'" [(ngModel)]="persona.tipoDocumento">
+                <option value="CC">CC</option>
+                <option value="TI">TI</option>
+                <option value="CE">CE</option>
+            </select>
+        </mz-select-container>
+    </div>
+
+    <!-- <div class="input-field col s6">
+        <i class="material-icons prefix">person_pin</i>
+        <input id="tipoDocumento" type="text" class="validate" [(ngModel)]="persona.tipoDocumento">
+        <label for="tipoDocumento" [class.active]="persona.tipoDocumento">
+            Tipo de documento
+        </label>
+    </div> -->
+</div>
+<div class="row">
+    <div class="input-field col s6">
+        <i class="material-icons prefix">contacts</i>
+        <input id="nombres" type="text" class="validate" [(ngModel)]="persona.nombres">
+        <label for="nombres" [class.active]="persona.nombres">Nombres</label>
+    </div>
+    <div class="input-field col s6">
+        <i class="material-icons prefix">contacts</i>
+        <input id="apellidos" type="text" class="validate" [(ngModel)]="persona.apellidos">
+        <label for="apellidos" [class.active]="persona.apellidos">
+            Apellidos
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col s4">
+        <i class="material-icons prefix">date_range</i>
+        <input type="date" class="datepicker" materialize="datepicker" [(ngModel)]="persona.fechaNacimiento">
+    </div>
+</div>
+<button (click)="procesarPeticion()" class="btn waves-effect waves-light" type="button">
+    {{ textoBotton }}
+    <i class="material-icons right">send</i>
+</button>
