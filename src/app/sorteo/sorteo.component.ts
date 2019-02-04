@@ -24,7 +24,7 @@ export class SorteoComponent implements OnInit {
       .subscribe(
           persona => {
             this.ganadoresSorteo = persona;
-            if(!this.ganadoresSorteo || this.ganadoresSorteo.length){
+            if(!this.ganadoresSorteo || !this.ganadoresSorteo.length){
                this.mensaje = "No hubo ganadores para el sorteo";
             }
         }

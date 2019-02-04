@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row acciones" *ngIf="!ganadoresSorteo?.length">
     <div class="col s4 offset-s4 center-align">
         <i class="material-icons user-icon">group</i>
     </div>
@@ -13,11 +13,13 @@
     </div>
 </div>
 
-<ng-container *ngIf="ganadores?.length">
+<ng-container *ngIf="ganadoresSorteo?.length">
+
+    <h4 class="center">¡Felicitaciones, estos son los ganadores!</h4>
 
     <p class="right">
         Mostrando
-        <strong>{{ ganadores.length }}</strong> ganadores
+        <strong>{{ ganadoresSorteo.length }}</strong> ganadores
     </p>
 
     <div class="row">
@@ -30,7 +32,7 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let ganador of ganadores">
+                <tr *ngFor="let ganador of ganadoresSorteo">
                     <td>{{ ganador.nombre}}</td>
                     <td>{{ ganador.premio }}</td>
                 </tr>
