@@ -21,7 +21,7 @@ Esta interfaz contiene:
 
 # Requisitos:
 Ejecutar el commando `npm install`.
-Ejecute `ng serve` para correr el servidor. Abra en el navegador `http://localhost:4200/`para visualizar la aplicación.
+Ejecute `ng serve` para correr el servidor. Ingrese a la URL `http://localhost:4200/` desde un explorador web para visualizar la aplicación.
 
 
 ## Autor: Claudia Arias Hernandez
