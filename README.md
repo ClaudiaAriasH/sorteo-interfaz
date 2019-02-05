@@ -3,16 +3,24 @@
 Interfaz para visualizar la información del sorteo.
 
 # ¿Qué puedo hacer?
-Esta interfaz contiene una pantalla principal donde se da una breve explicación de la aplicación, una opción personas donde se visualiza las personas registradas en la base de datos, además unos botones para editar o eliminar la persona y tiene la opción premios donde se puede ejecutar el sorteo y visualizar los ganadores.
+Esta interfaz contiene:
+- La pantalla principal donde se da una breve explicación de la aplicación.
+- La opción Persona que permite:
+    - Visualizar los datos de las personas registradas.
+    - Actualizar los datos de las personas.
+    - Eliminar personas.
+- La opción Premios que permite:
+    - Darle clic al botón `Presiona para el sorteo` donde se realizara la asignación de un   premio a cada persona registradas.
 
 
 # Tecnologías usadas:
 -	Angular CLI versión 7.1.3.
--	ngx-materialize: Se utilizo para la parte del diseño de la interfaz (https://materializecss.com/) 
--	ngx-toastr: Se implemento en los mensajes (https://www.npmjs.com/package/ngx-toastr)
+-	ngx-materialize: Se utilizó para la parte del diseño de la interfaz (https://materializecss.com/) 
+-	ngx-toastr: Se implementó en los mensajes (https://www.npmjs.com/package/ngx-toastr)
 
 # Requisitos:
-Ejecutar el commando npm install
+Ejecutar el commando `npm install`.
+Ejecute `ng serve` para correr el servidor. Abra en el navegador `http://localhost:4200/`para visualizar la aplicación.
 
 
 ## Autor: Claudia Arias Hernandez
