@@ -6,6 +6,7 @@ Interfaz para visualizar la información del sorteo.
 Esta interfaz contiene:
 - La pantalla principal donde se da una breve explicación de la aplicación.
 - La opción Persona que permite:
+    - Crear personas
     - Visualizar los datos de las personas registradas.
     - Actualizar los datos de las personas.
     - Eliminar personas.
